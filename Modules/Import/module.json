@@ -1,0 +1,11 @@
+{
+    "name": "Import",
+    "alias": "import",
+    "description": "The ebook Import Module.",
+    "active": 1,
+    "order": 90,
+    "providers": [
+        "Modules\\Import\\Providers\\ImportServiceProvider",
+        "Modules\\Import\\Providers\\RouteServiceProvider"
+    ]
+}

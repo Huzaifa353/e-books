@@ -1,0 +1,19 @@
+{
+    "name": "ci/favorite",
+    "description": "The Cynoinfotech Favorite Module.",
+    "authors": [
+        {
+            "name": "Cynoinfotech Team",
+            "email": "info@cynoinfotech.com"
+        }
+    ],
+    "require": {
+        "php": ">=8.0.2"
+    },
+    "autoload": {
+        "psr-4": {
+            "Modules\\Favorite\\": ""
+        }
+    }
+}
+
