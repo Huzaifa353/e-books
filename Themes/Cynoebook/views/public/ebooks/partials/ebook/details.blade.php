@@ -101,6 +101,9 @@
                 </span>
             @endif
 
+
+
+
             <div class="clearfix"></div> 
 
             @if (! is_null($ebook->book_edition))
@@ -142,13 +145,13 @@
                 <div class="clearfix"></div>
             @endif 
         <div class="ebook-action m-b-10"> 
-            @if (!$ebookPurchased && ! is_null($ebook->buy_url))
-                <a href="{{ $ebook->buy_url }}" target="_blank" class="btn btn-primary pull-left">
-                    {{clean(trans('cynoebook::ebook.buy_now'))}}
-                    @if (! is_null($ebook->price))
+            @if (!$ebookPurchased && $ebook->price >0 &&  ! is_null($ebook->buy_url))
+            <a href="{{ route('ebook.buy', $ebook->id) }}"  class="btn btn-primary pull-left">
+                {{ clean(trans('cynoebook::ebook.buy_now')) }}
+                @if (! is_null($ebook->price))
                     {{ $ebook->price }}
-                    @endif
-                </a>
+                @endif
+            </a>
             @endif
             <div class="pull-right">               
                 <span class="pull-left" style="margin-right: 5px;">                   

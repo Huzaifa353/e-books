@@ -134,7 +134,7 @@ class EbookController extends Controller
                 'target_reader'=>$request->target_reader,
                 'publisher'=>$request->publisher,
                 'price'=>$request->price,
-                'buy_url'=>$request->buy_url,
+                // 'buy_url'=>$request->buy_url,
                 'isbn'=>$request->isbn,
                 'publication_year'=>$request->publication_year,
                 'book_edition'=>$request->book_edition,
@@ -265,7 +265,7 @@ class EbookController extends Controller
         $ebook->publication_year=$request->publication_year;
         $ebook->publisher=$request->publisher;
         $ebook->price=$request->price;
-        $ebook->buy_url=$request->buy_url;
+        // $ebook->buy_url=$request->buy_url;
         $ebook->isbn=$request->isbn;
         $ebook->book_edition=$request->book_edition;
         $ebook->number_of_pages=$request->number_of_pages;
@@ -589,6 +589,21 @@ class EbookController extends Controller
 
 
     }
+
+    public function buy($id)
+    {
+        $ebook = Ebook::findOrFail($id);
+        $getSlug = $ebook->slug;
+      
+        if (!auth()->check()) {
+            // Store the intended URL for redirection after login
+            return redirect()->route('login'); // Redirect to login page
+        }else{
+       return redirect()->route('ebooks.show', $getSlug);
+    }
+}
+        // Additional logic if the user is already logged in
+        
 
     /**
      * Destroy resources by given ids.
