@@ -36952,3 +36952,51 @@ Stack trace:
 [stacktrace]
 #0 {main}
 "} 
+[2024-11-07 07:48:20] development.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "D:\ebook\eBook\Modules/Account/Resources/views" directory does not exist. in D:\ebook\eBook\vendor\symfony\finder\Finder.php:590
+Stack trace:
+#0 D:\ebook\eBook\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(569): Symfony\Component\Finder\Finder->in('D:\\ebook\\eBook\\...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('D:\\ebook\\eBook\\...')
+#2 Command line code(1): getViews('D:\\ebook\\eBook\\...', Object(Illuminate\Filesystem\Filesystem), 'account', '::')
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"D:\\ebook\\eBook\\Modules/Account/Resources/views\" directory does not exist. in D:\\ebook\\eBook\\vendor\\symfony\\finder\\Finder.php:590
+Stack trace:
+#0 D:\\ebook\\eBook\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(569): Symfony\\Component\\Finder\\Finder->in('D:\\\\ebook\\\\eBook\\\\...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('D:\\\\ebook\\\\eBook\\\\...')
+#2 Command line code(1): getViews('D:\\\\ebook\\\\eBook\\\\...', Object(Illuminate\\Filesystem\\Filesystem), 'account', '::')
+#3 {main}
+  thrown at D:\\ebook\\eBook\\vendor\\symfony\\finder\\Finder.php:590)
+[stacktrace]
+#0 {main}
+"} 
+[2024-11-07 07:48:22] development.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "D:\ebook\eBook\Modules/Account/Resources/views" directory does not exist. in D:\ebook\eBook\vendor\symfony\finder\Finder.php:590
+Stack trace:
+#0 D:\ebook\eBook\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(569): Symfony\Component\Finder\Finder->in('D:\\ebook\\eBook\\...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('D:\\ebook\\eBook\\...')
+#2 Command line code(1): getViews('D:\\ebook\\eBook\\...', Object(Illuminate\Filesystem\Filesystem), 'account', '::')
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"D:\\ebook\\eBook\\Modules/Account/Resources/views\" directory does not exist. in D:\\ebook\\eBook\\vendor\\symfony\\finder\\Finder.php:590
+Stack trace:
+#0 D:\\ebook\\eBook\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(569): Symfony\\Component\\Finder\\Finder->in('D:\\\\ebook\\\\eBook\\\\...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('D:\\\\ebook\\\\eBook\\\\...')
+#2 Command line code(1): getViews('D:\\\\ebook\\\\eBook\\\\...', Object(Illuminate\\Filesystem\\Filesystem), 'account', '::')
+#3 {main}
+  thrown at D:\\ebook\\eBook\\vendor\\symfony\\finder\\Finder.php:590)
+[stacktrace]
+#0 {main}
+"} 
+[2024-11-07 07:48:24] development.ERROR: Uncaught Symfony\Component\Finder\Exception\DirectoryNotFoundException: The "D:\ebook\eBook\Modules/Account/Resources/views" directory does not exist. in D:\ebook\eBook\vendor\symfony\finder\Finder.php:590
+Stack trace:
+#0 D:\ebook\eBook\vendor\laravel\framework\src\Illuminate\Filesystem\Filesystem.php(569): Symfony\Component\Finder\Finder->in('D:\\ebook\\eBook\\...')
+#1 Command line code(1): Illuminate\Filesystem\Filesystem->files('D:\\ebook\\eBook\\...')
+#2 Command line code(1): getViews('D:\\ebook\\eBook\\...', Object(Illuminate\Filesystem\Filesystem), 'account', '::')
+#3 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\ErrorHandler\\Error\\FatalError(code: 0): Uncaught Symfony\\Component\\Finder\\Exception\\DirectoryNotFoundException: The \"D:\\ebook\\eBook\\Modules/Account/Resources/views\" directory does not exist. in D:\\ebook\\eBook\\vendor\\symfony\\finder\\Finder.php:590
+Stack trace:
+#0 D:\\ebook\\eBook\\vendor\\laravel\\framework\\src\\Illuminate\\Filesystem\\Filesystem.php(569): Symfony\\Component\\Finder\\Finder->in('D:\\\\ebook\\\\eBook\\\\...')
+#1 Command line code(1): Illuminate\\Filesystem\\Filesystem->files('D:\\\\ebook\\\\eBook\\\\...')
+#2 Command line code(1): getViews('D:\\\\ebook\\\\eBook\\\\...', Object(Illuminate\\Filesystem\\Filesystem), 'account', '::')
+#3 {main}
+  thrown at D:\\ebook\\eBook\\vendor\\symfony\\finder\\Finder.php:590)
+[stacktrace]
+#0 {main}
+"} 
