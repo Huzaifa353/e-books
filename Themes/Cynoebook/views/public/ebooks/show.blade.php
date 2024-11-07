@@ -38,7 +38,7 @@
                     </div>
                 @endif
             @else
-                @if(setting('enable_file_preview'))
+                @if(setting('enable_file_preview') && $ebookPurchased)
                     @include('public.ebooks.partials.ebook.view-files')
                 @endif
             @endif

@@ -370,7 +370,6 @@ class EbookController extends Controller
      */
     public function show($slug)
     {
-
         $ebook = Ebook::findBySlug($slug);
 
         $reviews = $this->getReviews($ebook);
@@ -403,9 +402,16 @@ class EbookController extends Controller
 
         }
 
-        $availableFiles=$this->getBookFile($ebook);
+        $user = auth()->user();
+        $ebookPurchased = $user ? $user->hasPurchasedEbook($ebook->id): false;
 
-        return view('public.ebooks.show', compact('ebook','reviews','relatedEbooks','unlock','availableFiles'));
+        $availableFiles = null;
+        if($ebookPurchased)
+        {
+            $availableFiles=$this->getBookFile($ebook);
+        }
+
+        return view('public.ebooks.show', compact('ebook','reviews','relatedEbooks','unlock','availableFiles','ebookPurchased'));
 
     }
 

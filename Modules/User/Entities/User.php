@@ -241,5 +241,21 @@ class User extends EloquentUser implements AuthenticatableContract
                 return [$user->id => $user->FullName];
             });
     }
+
+    public function purchasedEbooks(): BelongsToMany
+    {
+        return $this->belongsToMany(Ebook::class, 'user_ebook')
+                    ->withPivot('purchased')
+                    ->withTimestamps();
+    }
+
+    public function hasPurchasedEbook($ebookId) : bool
+    {
+        // Check if the user has purchased the ebook
+        return $this->purchasedEbooks()
+                ->where('ebook_id', $ebookId)
+                ->wherePivot('purchased', true)
+                ->exists();
+    }
     
 }
