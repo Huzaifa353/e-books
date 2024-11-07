@@ -26,8 +26,6 @@
     <script>
     (function () {
         "use strict";
-        
-
         new DataTable('#menus-table .table', {
             columns: [
                 { data: 'checkbox', orderable: false, searchable: false, width: '3%' },

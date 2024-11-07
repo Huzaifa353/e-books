@@ -46,7 +46,7 @@
             </a>
         </li>
         
-        @if(setting('enable_ebook_upload'))
+        {{-- @if(setting('enable_ebook_upload'))
         <li role="separator" class="divider"></li>
         <li>
             <a href="{{ route('ebooks.upload') }}">
@@ -55,7 +55,7 @@
             {{ clean(trans('cynoebook::account.links.upload_ebook')) }}
             </a>
         </li>
-        @endif
+        @endif --}}
         <li role="separator" class="divider"></li>
         @if(auth()->user()->hasRoleName('admin'))
             <li>

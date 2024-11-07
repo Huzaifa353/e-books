@@ -29,7 +29,7 @@
                                 {{ clean(trans('cynoebook::account.links.my_ebook')) }}
                             </a>
                         </li>
-                        @if(setting('enable_ebook_upload'))
+                        {{-- @if(setting('enable_ebook_upload'))
                         <li class="{{ request()->routeIs('ebooks.upload') ? 'active' : '' }}">
                             <a href="{{ route('ebooks.upload') }}">
                                 <i class="fa fa-upload" aria-hidden="true"></i>
@@ -42,7 +42,7 @@
                                 {{ clean(trans('cynoebook::account.links.my_authors')) }}
                             </a>
                         </li>
-                        @endif
+                        @endif --}}
                         
                         <li class="{{ request()->routeIs('account.favorite.index') ? 'active' : '' }}">
                             <a href="{{ route('account.favorite.index') }}">
