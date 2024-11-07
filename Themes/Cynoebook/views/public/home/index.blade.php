@@ -56,9 +56,9 @@
      @include('public.home.sections.advertisement',['ad'=>$homeAdvertisement1])
     @endif
     
-    {{-- @if (setting('cynoebook_features_section_enabled'))
+    @if (setting('cynoebook_features_section_enabled'))
         @include('public.home.sections.features')
-    @endif --}}
+    @endif
 
     @if (setting('cynoebook_featured_ebooks_carousel_section_enabled'))
         @include('public.home.sections.ebook_carousel', [
