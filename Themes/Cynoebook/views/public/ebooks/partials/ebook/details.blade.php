@@ -152,8 +152,14 @@
                         <div>Total</div>
                         <div>${{ $ebook->price }}</div>
                     </div>
-                    <div id="paypal-button-container"></div>
-                    <p id="result-message"></p>
+                    @if(auth()->check())
+                        <div id="paypal-button-container"></div>
+                        <p id="result-message"></p>
+                    @else 
+                        <a href="{{ route('login') }}" class="btn btn-primary pull-left login-btn">
+                            Login to Proceed
+                        </a>
+                    @endif
                 </div>
             @else
             <div class="pull-right">               
@@ -249,19 +255,6 @@
     })();     
     
 </script>
-<style>
-    .paypal {
-        max-width: 300px;
-        margin: 11px auto;
-    }
-    .paypal .price-text {
-        display: flex;
-        justify-content: space-between;
-        font-weight: 700;
-        margin-bottom: 5px;
-        font-size: 17px;
-    }
-</style>
 <script>
       const ebookId = {{ $ebook->id }};
     // Add the CSRF token to JavaScript

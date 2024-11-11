@@ -10,6 +10,23 @@
     <meta property="og:title" content="{{ $ebook->meta->meta_title }}">
     <meta property="og:description" content="{{ $ebook->meta->meta_description }}">
     <meta property="og:image" content="{{ $ebook->bookCover->path }}">
+    
+    <style>
+        .paypal {
+            max-width: 300px;
+            margin: 11px auto;
+        }
+        .paypal .price-text {
+            display: flex;
+            justify-content: space-between;
+            font-weight: 700;
+            margin-bottom: 5px;
+            font-size: 17px;
+        }
+        .login-btn {
+            width: 100%;
+        }
+    </style>
 @endpush
 
 @section('breadcrumb')
