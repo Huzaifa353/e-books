@@ -5,6 +5,7 @@ namespace Modules\Account\Http\Controllers;
 use Illuminate\Routing\Controller;
 use Modules\Ebook\Entities\Ebook;
 
+
 class AccountDashboardController extends Controller
 {
     /**
@@ -14,12 +15,15 @@ class AccountDashboardController extends Controller
      */
     public function index()
     {
-        $ebooks=Ebook::forCard()
-                ->where('user_id',auth()->user()->id)
-                ->withoutGlobalScope('active')->latest()
-                ->paginate(10);
-                
-        
+      //  dd(auth()->user()->purchasedEbooks()->where('user_ebook.purchased', 1)->get());
+        // $ebooks = Ebook::forCard()
+        // ->where('user_id', auth()->user()->id)
+        // ->withoutGlobalScope('active')
+        // ->latest()
+        // ->paginate(10);
+
+        $ebooks = auth()->user()->purchasedEbooks()->where('user_ebook.purchased', 1)->latest()->paginate(10);
+
         return view('public.account.dashboard.index', compact('ebooks'));
     }
 }
