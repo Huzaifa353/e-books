@@ -1,12 +1,13 @@
 @extends('public.account.layout')
 
 @section('title', clean(trans('cynoebook::account.links.my_ebook')))
-
 @section('content_right')
     <div class="my-dashboard">
         <div class="account-information clearfix">
-            <h4>{{ clean(trans('cynoebook::account.dashboard.my_ebook')) }}</h4>
+            <h4>Purchased Ebooks</h4>
 
+
+            
             <div class="col-md-12">
                 <div class="row">
                     <div class="index-table">
@@ -24,7 +25,6 @@
                                             <th>{{ clean(trans('cynoebook::account.ebooks.views')) }}</th>
                                             <th>{{ clean(trans('cynoebook::account.ebooks.status')) }}</th>
                                             <th>{{ clean(trans('cynoebook::account.ebooks.date')) }}</th>
-                                            <th>{{ clean(trans('cynoebook::account.ebooks.action')) }}</th>
                                         </tr>
                                     </thead>
 
@@ -78,16 +78,6 @@
                                                 </td>
                                                 
                                                 <td>{{ $ebook->created_at->toFormattedDateString() }}</td>
-                                                <td class="action">
-                                                    <a class="" href="{{ route('ebooks.edit', ['slug' => $ebook->slug]) }}" data-toggle="tooltip" title="{{ clean(trans('cynoebook::account.ebooks.edit_ebook')) }}">
-                                                        <i class="fa fa-pencil-square-o" aria-hidden="true"></i>
-                                                    </a>
-                                                    <a class="" onclick="return confirm('{{ clean(trans('cynoebook::account.ebooks.delete_confirm_message')) }}')" href="{{ route('ebooks.delete', ['slug' => $ebook->slug]) }}" data-toggle="tooltip" title="{{ clean(trans('cynoebook::account.ebooks.delete_ebook')) }}">
-                                                        <i class="fa fa-trash" aria-hidden="true"></i>
-                                                    </a>
-                                                    
-                                                    
-                                                </td>
                                             </tr>
                                         @endforeach
                                     </tbody>

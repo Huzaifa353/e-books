@@ -2,6 +2,7 @@
 
 namespace Modules\Ebook\Http\Controllers;
 
+
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Facades\Crypt;
@@ -23,9 +24,11 @@ use Modules\Files\Entities\Files;
 use Carbon\Carbon;
 use DB;
 use Auth;
+use Illuminate\Support\Facades\Auth as FacadesAuth;
 use Illuminate\Support\Facades\Log;
 use Response;
 use Illuminate\Support\Facades\Cookie;
+// use Srmklive\PayPal\Services\PayPal as PayPalClient;
 
 class EbookController extends Controller
 {
@@ -43,6 +46,7 @@ class EbookController extends Controller
     {
         $this->auth = $auth;
         $this->middleware(SetEbookSortOption::class)->only('index');
+        // $this->paypal = $paypal;
     }
     /**
      * Display a listing of the resource.
@@ -53,6 +57,7 @@ class EbookController extends Controller
      */
     public function index(Ebook $model, EbookFilter $ebookFilter)
     {
+       
         //$user_id=auth()->user()->id;
         $ebookIds = [];
 
@@ -593,14 +598,46 @@ class EbookController extends Controller
     public function buy($id)
     {
         $ebook = Ebook::findOrFail($id);
+        $ebook->purchase();
         $getSlug = $ebook->slug;
+        
       
         if (!auth()->check()) {
             // Store the intended URL for redirection after login
             return redirect()->route('login'); // Redirect to login page
         }else{
+           
+    //         $payment = $this->paypal->createPayment([
+    //             "intent" => "sale",
+    //             "payer" => [
+    //                 "payment_method" => "paypal"
+    //             ],
+    //             "redirect_urls" => [
+    //                 "return_url" => route('payment.status', ['id' => $id, 'status' => 'success']),
+    //                 "cancel_url" => route('payment.status', ['id' => $id, 'status' => 'cancel']),
+    //             ],
+    //             "transactions" => [
+    //                 [
+    //                     "amount" => [
+    //                         "total" => $ebook->price,
+    //                         "currency" => "USD"
+    //                     ],
+    //                     "description" => "Payment for " . $ebook->title,
+    //                 ],
+    //             ]
+    //         ]);
+           
+    
+    //         if (isset($payment['links'][1]['href'])) {
+    //             return redirect($payment['links'][1]['href']); // Redirect to PayPal for payment
+    //         } else {
+    //             return redirect()->back()->with('error', 'Something went wrong.');
+    //         }
+
+
        return redirect()->route('ebooks.show', $getSlug);
-    }
+    // }
+    }   
 }
         // Additional logic if the user is already logged in
         

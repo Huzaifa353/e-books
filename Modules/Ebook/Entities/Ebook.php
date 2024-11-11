@@ -18,6 +18,7 @@ use Modules\User\Entities\User;
 use Modules\Review\Entities\Review;
 use Modules\Ebook\Admin\Table\EbookTable;
 use Modules\Ebook\Entities\ReportedEbook;
+use Illuminate\Support\Facades\Auth;
 
 class Ebook extends Model
 {
@@ -91,6 +92,7 @@ class Ebook extends Model
      *
      * @return void
      */
+    
     protected static function boot()
     {
         parent::boot();
@@ -388,5 +390,29 @@ class Ebook extends Model
         return static::with([
             'files'
         ])->isPrivate()->where('slug', $slug)->firstOrFail();
+    }
+
+    public function purchase()
+    {
+        // Check if the user is authenticated
+        if (Auth::check()) {
+            $userId = Auth::id();
+
+            // Associate the ebook with the user and set is_purchased to 1
+            $this->users()->syncWithoutDetaching([
+                $userId => ['purchased' => 1]
+            ]);
+
+            return true; // Indicate success
+        }
+
+        return false; // Indicate failure if user is not authenticated
+    }
+
+    // Define relationship with users through user_ebook table
+    public function users()
+    {
+        return $this->belongsToMany(User::class, 'user_ebook')
+                    ->withPivot('purchased');
     }
 }

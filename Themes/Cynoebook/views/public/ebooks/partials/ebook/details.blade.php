@@ -145,7 +145,7 @@
                 <div class="clearfix"></div>
             @endif 
         <div class="ebook-action m-b-10"> 
-            @if (!$ebookPurchased && $ebook->price >0 &&  ! is_null($ebook->buy_url))
+            @if (!$ebookPurchased && $ebook->price >0)
             <a href="{{ route('ebook.buy', $ebook->id) }}"  class="btn btn-primary pull-left">
                 {{ clean(trans('cynoebook::ebook.buy_now')) }}
                 @if (! is_null($ebook->price))
