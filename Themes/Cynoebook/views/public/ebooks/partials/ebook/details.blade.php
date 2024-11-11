@@ -145,14 +145,17 @@
                 <div class="clearfix"></div>
             @endif 
         <div class="ebook-action m-b-10"> 
-            @if (!$ebookPurchased && $ebook->price >0)
-            <a href="{{ route('ebook.buy', $ebook->id) }}"  class="btn btn-primary pull-left">
-                {{ clean(trans('cynoebook::ebook.buy_now')) }}
-                @if (! is_null($ebook->price))
-                    {{ $ebook->price }}
-                @endif
-            </a>
-            @endif
+    
+            @if (!$ebookPurchased && $ebook->price)
+                <div class="paypal">
+                    <div class="price-text">
+                        <div>Total</div>
+                        <div>${{ $ebook->price }}</div>
+                    </div>
+                    <div id="paypal-button-container"></div>
+                    <p id="result-message"></p>
+                </div>
+            @else
             <div class="pull-right">               
                 <span class="pull-left" style="margin-right: 5px;">                   
                     @if($ebook->isFavorite())
@@ -220,6 +223,7 @@
                 @endif   
             </div>
             <div class="clearfix"></div>
+            @endif
         </div> 
     </div>
 </div>
@@ -244,5 +248,81 @@
         }); 
     })();     
     
+</script>
+<style>
+    .paypal {
+        max-width: 300px;
+        margin: 11px auto;
+    }
+    .paypal .price-text {
+        display: flex;
+        justify-content: space-between;
+        font-weight: 700;
+        margin-bottom: 5px;
+        font-size: 17px;
+    }
+</style>
+<script>
+      const ebookId = {{ $ebook->id }};
+    // Add the CSRF token to JavaScript
+    window.Laravel = { csrfToken1: '{{ csrf_token() }}', csrfToken2: '{{ csrf_token() }}' };
+</script>
+<script src="https://www.paypal.com/sdk/js?client-id={{ env('PAYPAL_CLIENT_ID') }}&currency=USD&components=buttons&enable-funding=card&disable-funding=venmo,paylater"
+    data-sdk-integration-source="developer-studio"></script>
+<script>
+    paypal.Buttons({
+        style: {
+            shape: "rect",
+            layout: "vertical",
+            color: "gold",
+            label: "pay",
+        },
+
+        async createOrder() {
+            try {
+                const response = await fetch("/api/paypal/orders", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRF-TOKEN": window.Laravel.csrfToken1 
+                    },
+                    body: JSON.stringify({
+                        ebookId: ebookId,
+                    }),
+                });
+
+                const orderData = await response.json();
+                if (orderData.order.id) {
+                    return orderData.order.id;
+                }
+
+                throw new Error("Could not initiate PayPal Checkout.");
+            } catch (error) {
+                console.error(error);
+            }
+        },
+
+        async onApprove(data) {
+            try {
+                const response = await fetch(`/api/paypal/orders/${data.orderID}/capture`, {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json",
+                        "X-CSRF-TOKEN": window.Laravel.csrfToken2
+                    },
+                    body: JSON.stringify({
+                        ebookId: ebookId,
+                    }),
+                });
+
+                const orderData = await response.json();
+                console.log("Transaction completed:", orderData);
+                location.reload(true);
+                // You can handle success or redirect here
+            } catch (error) {
+                console.error(error);
+            }
+        },
+    }).render("#paypal-button-container");
 </script>
 @endpush

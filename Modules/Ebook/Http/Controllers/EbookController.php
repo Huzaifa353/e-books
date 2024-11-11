@@ -595,52 +595,14 @@ class EbookController extends Controller
 
     }
 
-    public function buy($id)
+    public static function buy($ebookId, $userId)
     {
-        $ebook = Ebook::findOrFail($id);
-        $ebook->purchase();
+        $ebook = Ebook::findOrFail($ebookId);
+        $ebook->purchase($userId);
         $getSlug = $ebook->slug;
-        
-      
-        if (!auth()->check()) {
-            // Store the intended URL for redirection after login
-            return redirect()->route('login'); // Redirect to login page
-        }else{
-           
-    //         $payment = $this->paypal->createPayment([
-    //             "intent" => "sale",
-    //             "payer" => [
-    //                 "payment_method" => "paypal"
-    //             ],
-    //             "redirect_urls" => [
-    //                 "return_url" => route('payment.status', ['id' => $id, 'status' => 'success']),
-    //                 "cancel_url" => route('payment.status', ['id' => $id, 'status' => 'cancel']),
-    //             ],
-    //             "transactions" => [
-    //                 [
-    //                     "amount" => [
-    //                         "total" => $ebook->price,
-    //                         "currency" => "USD"
-    //                     ],
-    //                     "description" => "Payment for " . $ebook->title,
-    //                 ],
-    //             ]
-    //         ]);
-           
-    
-    //         if (isset($payment['links'][1]['href'])) {
-    //             return redirect($payment['links'][1]['href']); // Redirect to PayPal for payment
-    //         } else {
-    //             return redirect()->back()->with('error', 'Something went wrong.');
-    //         }
 
-
-       return redirect()->route('ebooks.show', $getSlug);
-    // }
-    }   
-}
-        // Additional logic if the user is already logged in
-        
+        return redirect()->route('ebooks.show', $getSlug);  
+    }        
 
     /**
      * Destroy resources by given ids.

@@ -392,12 +392,10 @@ class Ebook extends Model
         ])->isPrivate()->where('slug', $slug)->firstOrFail();
     }
 
-    public function purchase()
+    public function purchase($userId)
     {
         // Check if the user is authenticated
-        if (Auth::check()) {
-            $userId = Auth::id();
-
+        if ($userId) {
             // Associate the ebook with the user and set is_purchased to 1
             $this->users()->syncWithoutDetaching([
                 $userId => ['purchased' => 1]

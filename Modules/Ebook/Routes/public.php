@@ -13,3 +13,8 @@ Route::put('ebook/{id}', 'EbookController@update')->name('ebooks.update');
 Route::get('epub/{slug}', 'EbookController@epubReader')->name('ebooks.epubReader');
 Route::post('ebooks/{slug}/pdfviewer', 'EbookController@pdfviewer')->name('ebooks.pdfviewer');
 Route::get('/ebook/buy/{id}', 'EbookController@buy')->name('ebook.buy');
+
+use App\Http\Controllers\PayPalController;
+
+Route::post('/api/paypal/orders', [PayPalController::class, 'createOrderPaypal']);
+Route::post('/api/paypal/orders/{orderID}/capture', [PayPalController::class, 'captureOrderPaypal']);
