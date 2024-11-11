@@ -14,7 +14,7 @@
     <style>
         .paypal {
             max-width: 300px;
-            margin: 11px auto;
+            margin: 11px 0;
         }
         .paypal .price-text {
             display: flex;
