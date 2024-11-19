@@ -17,3 +17,6 @@ use App\Http\Controllers\PayPalController;
 
 Route::post('/api/paypal/orders', [PayPalController::class, 'createOrderPaypal']);
 Route::post('/api/paypal/orders/{orderID}/capture', [PayPalController::class, 'captureOrderPaypal']);
+
+Route::post('/api/paypal/order-cart', [PayPalController::class, 'createOrderCartPaypal']);
+Route::post('/api/paypal/order-cart/{orderID}/capture', [PayPalController::class, 'captureOrderCartPaypal']);

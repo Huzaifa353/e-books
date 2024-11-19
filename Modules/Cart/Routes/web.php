@@ -13,4 +13,7 @@
 
 Route::prefix('cart')->group(function() {
     Route::get('/', 'CartController@index');
+    Route::get('/get', 'CartController@get'); // Get all items from cart
+    Route::get('/add/{ebookId}', 'CartController@add'); // add item to cart
+    Route::get('/remove/{ebookId}', 'CartController@remove'); // remove item from cart
 });
