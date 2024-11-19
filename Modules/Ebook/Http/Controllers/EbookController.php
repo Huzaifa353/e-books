@@ -21,6 +21,7 @@ use Modules\Ebook\Http\Middleware\SetEbookSortOption;
 use Modules\Ebook\Http\Requests\StoreEbookRequest;
 use Modules\Ebook\Http\Requests\UpdateEbookRequest;
 use Modules\Files\Entities\Files;
+use Modules\Cart\Entities\Carts;
 use Carbon\Carbon;
 use DB;
 use Auth;
@@ -123,7 +124,7 @@ class EbookController extends Controller
 
 		if (setting('auto_approve_ebook') && setting('auto_approve_user')) {
            $is_active=1;
-        } else{
+        }else{
             $is_active=0;
         }
 
@@ -413,10 +414,12 @@ class EbookController extends Controller
         $availableFiles = null;
         if($ebookPurchased)
         {
-            $availableFiles=$this->getBookFile($ebook);
+            $availableFiles = $this->getBookFile($ebook);
         }
 
-        return view('public.ebooks.show', compact('ebook','reviews','relatedEbooks','unlock','availableFiles','ebookPurchased'));
+        $ebookInCart = Carts::where(['user_id' => $user->id, 'ebook_id' => $ebook->id])->exists();
+
+        return view('public.ebooks.show', compact('ebook','reviews','relatedEbooks','unlock','availableFiles','ebookPurchased', 'ebookInCart'));
 
     }
 

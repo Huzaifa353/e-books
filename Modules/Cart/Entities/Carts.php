@@ -19,8 +19,8 @@ class Carts extends Model
 
     protected $fillable = ['user_id','ebook_id'];
 
-    
-  
-
-   
+    public function ebook()
+    {
+        return $this->belongsTo(Ebook::class, 'ebook_id', 'id');
+    }   
 }

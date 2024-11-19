@@ -10,6 +10,7 @@
                 </tr>
             </thead>
             <tbody>
+                @foreach($ebooksInCart as $ebook)
                 <tr>
                     <td style="text-align: center">
                         <a href="#" >
@@ -22,11 +23,13 @@
                         </div>
                     </td>
                     <td>
+                        {{ clean($ebook->ebook->slug) }}
                         <a href="http://127.0.0.1:4001/en/ebooks/batman-damned">Batman: Damned</a>
                     </td>
                     <td>2019</td>
-                    <td>$566</td>
+                    <td>${{$ebook->ebook->price}}</td>
                 </tr>
+                @endforeach
                 <tr>
                     <td style="text-align: center">
                         <a href="#">

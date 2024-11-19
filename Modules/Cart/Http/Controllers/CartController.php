@@ -23,7 +23,12 @@ class CartController extends Controller
     }
     public function index()
     {
-        return view('public.cart.index');
+        $user = auth()->user();
+        $ebooksInCart = Carts::where([
+            'user_id' => $user->id
+        ])->get();
+
+        return view('public.cart.index', compact('ebooksInCart'));
     }
 
     /**
@@ -60,37 +65,27 @@ class CartController extends Controller
         }
      
     }
-    public function store(Request $request)
+    public function store($ebookId)
     {
-      // dd($request->ebook_id);
-        // Validate the incoming request
-        $request->validate([
-            'user_id' => 'required|exists:users,id', // Ensure the user_id exists in the users table
-            'ebook_id' => 'required|exists:ebooks,id', // Ensure the ebook_id exists in the ebooks table
-        ]);
-        $user =auth()->user()->id;
+        $userId = auth()->user()->id;
 
-        if($user){
+        if($userId){
                // Check if the cart item already exists to prevent duplicates
-            $cartExists = Carts::where('user_id', $user)
-            ->where('ebook_id', $request->ebook_id)
+            $cartExists = Carts::where('user_id', $userId)
+            ->where('ebook_id', $ebookId)
             ->exists();
 
             if ($cartExists) {
-                return response()->json(['message' => 'This item is already in the cart.'], 409); // Conflict
+                redirect()->back()->with('success', 'This item is already in the cart');
             }
            
             // Add the new cart item
             $cart = Carts::create([
-                'user_id' => $user,
-                'ebook_id' => $request->ebook_id,
+                'user_id' => $userId,
+                'ebook_id' => $ebookId,
             ]);
-            dd($cart);
-            return response()->json([
-                'message' => 'Item added to the cart successfully.',
-                'cart' => $cart,
-            ], 200); // Created
-
+            
+            return redirect()->back()->with('success', 'Item added to cart successfully!');
         }
      
     }

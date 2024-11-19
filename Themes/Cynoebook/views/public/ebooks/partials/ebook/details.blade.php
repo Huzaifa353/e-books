@@ -152,14 +152,17 @@
                         <div>Total</div>
                         <div>${{ $ebook->price }}</div>
                     </div>
-                    <a href="#" class="add-to-cart">
-                        <img width="24" height="24" src="https://img.icons8.com/material-rounded/262938/24/shopping-cart.png" alt="shopping-cart"/>
-                        Add to Cart
-                    </a>
-                    <a href="{{route('cart')}}" class="view-cart">
-                        <img width="24" height="24" src="https://img.icons8.com/material-rounded/262938/24/shopping-cart.png" alt="shopping-cart"/>
-                        View Cart
-                    </a>
+                    @if($ebookInCart)
+                        <a href="{{route('cart.index')}}" class="view-cart">
+                            <img width="24" height="24" src="https://img.icons8.com/material-rounded/262938/24/shopping-cart.png" alt="shopping-cart"/>
+                            View Cart
+                        </a>
+                    @else
+                        <a href="{{route('cart.add', $ebook->id)}}" class="add-to-cart">
+                            <img width="24" height="24" src="https://img.icons8.com/material-rounded/262938/24/shopping-cart.png" alt="shopping-cart"/>
+                            Add to Cart
+                        </a>
+                    @endif
                     @if(auth()->check())
                         <div id="paypal-button-container"></div>
                         <p id="result-message"></p>
