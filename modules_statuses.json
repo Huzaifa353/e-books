@@ -18,5 +18,6 @@
     "Slider": true,
     "Newsletter": true,
     "Comment": true,
-    "Import": false
+    "Import": false,
+    "Cart": true
 }
