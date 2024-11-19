@@ -152,6 +152,14 @@
                         <div>Total</div>
                         <div>${{ $ebook->price }}</div>
                     </div>
+                    <a href="#" class="add-to-cart">
+                        <img width="24" height="24" src="https://img.icons8.com/material-rounded/262938/24/shopping-cart.png" alt="shopping-cart"/>
+                        Add to Cart
+                    </a>
+                    <a href="{{route('cart')}}" class="view-cart">
+                        <img width="24" height="24" src="https://img.icons8.com/material-rounded/262938/24/shopping-cart.png" alt="shopping-cart"/>
+                        View Cart
+                    </a>
                     @if(auth()->check())
                         <div id="paypal-button-container"></div>
                         <p id="result-message"></p>
@@ -163,7 +171,7 @@
                 </div>
             @else
             <div class="pull-right">               
-                <span class="pull-left" style="margin-right: 5px;">                   
+                <span class="pull-left" style="margin-right: 5px;">
                     @if($ebook->isFavorite())
                         <form method="POST" action="{{ route('account.favorite.destroy',$ebook) }}">
                             {{ csrf_field() }}

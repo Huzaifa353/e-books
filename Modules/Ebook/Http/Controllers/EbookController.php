@@ -123,7 +123,7 @@ class EbookController extends Controller
 
 		if (setting('auto_approve_ebook') && setting('auto_approve_user')) {
            $is_active=1;
-        }else{
+        } else{
             $is_active=0;
         }
 

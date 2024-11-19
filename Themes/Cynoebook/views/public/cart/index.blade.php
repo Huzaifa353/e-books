@@ -1,100 +1,73 @@
 @extends('public.layout')
 
 @section('content')
-    <div class="shopping-cart">
-        <!-- Title -->
-        <div class="title">
-            Shopping Bag
-        </div>
-    
-        <!-- Product #1 -->
-        <div class="item">
-        <div class="buttons">
-            <span class="delete-btn"></span>
-            <span class="like-btn"></span>
-        </div>
-    
-        <div class="image">
-            <img src="item-1.png" alt="" />
-        </div>
-    
-        <div class="description">
-            <span>Common Projects</span>
-            <span>Bball High</span>
-            <span>White</span>
-        </div>
-    
-        <div class="quantity">
-            <button class="plus-btn" type="button" name="button">
-            <img src="plus.svg" alt="" />
-            </button>
-            <input type="text" name="name" value="1">
-            <button class="minus-btn" type="button" name="button">
-            <img src="minus.svg" alt="" />
-            </button>
-        </div>
-    
-        <div class="total-price">$549</div>
-        </div>
-    
-        <!-- Product #2 -->
-        <div class="item">
-        <div class="buttons">
-            <span class="delete-btn"></span>
-            <span class="like-btn"></span>
-        </div>
-    
-        <div class="image">
-            <img src="item-2.png" alt="" />
-        </div>
-    
-        <div class="description">
-            <span>Maison Margiela</span>
-            <span>Future Sneakers</span>
-            <span>White</span>
-        </div>
-    
-        <div class="quantity">
-            <button class="plus-btn" type="button" name="button">
-            <img src="plus.svg" alt="" />
-            </button>
-            <input type="text" name="name" value="1">
-            <button class="minus-btn" type="button" name="button">
-            <img src="minus.svg" alt="" />
-            </button>
-        </div>
-    
-        <div class="total-price">$870</div>
-        </div>
-    
-        <!-- Product #3 -->
-        <div class="item">
-        <div class="buttons">
-            <span class="delete-btn"></span>
-            <span class="like-btn"></span>
-        </div>
-    
-        <div class="image">
-            <img src="item-3.png" alt="" />
-        </div>
-    
-        <div class="description">
-            <span>Our Legacy</span>
-            <span>Brushed Scarf</span>
-            <span>Brown</span>
-        </div>
-    
-        <div class="quantity">
-            <button class="plus-btn" type="button" name="button">
-            <img src="plus.svg" alt="" />
-            </button>
-            <input type="text" name="name" value="1">
-            <button class="minus-btn" type="button" name="button">
-            <img src="minus.svg" alt="" />
-            </button>
-        </div>
-    
-        <div class="total-price">$349</div>
-        </div>
+<div class="index-table" style="max-width: 800px; margin: 11px auto">
+    <div class="table-responsive">
+        <table class="table">
+            <thead>
+                <tr>
+                    <h2 style="padding: 5px 21px">Cart</h2>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align: center">
+                        <a href="#" >
+                            <img width="23" height="23" src="https://img.icons8.com/ios-filled/666666/23/delete-sign--v1.png" alt="filled-trash"/>
+                        </a>
+                    </td>
+                    <td style="width: 100px">
+                        <div class="image-holder">
+                            <img src="http://127.0.0.1:4001/storage/media/2GKvTqbwntp5DnViZB7hpqBOgKKfShvmNnowyXju.png">
+                        </div>
+                    </td>
+                    <td>
+                        <a href="http://127.0.0.1:4001/en/ebooks/batman-damned">Batman: Damned</a>
+                    </td>
+                    <td>2019</td>
+                    <td>$566</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center">
+                        <a href="#">
+                            <img width="23" height="23" src="https://img.icons8.com/ios-filled/666666/23/delete-sign--v1.png" alt="filled-trash"/>
+                        </a>
+                    </td>
+                    <td>
+                        <div class="image-holder">
+                            <img src="http://127.0.0.1:4001/storage/media/2GKvTqbwntp5DnViZB7hpqBOgKKfShvmNnowyXju.png">
+                        </div>
+                    </td>
+                    <td>
+                        <a href="http://127.0.0.1:4001/en/ebooks/secret-wars">Secret Wars</a>
+                    </td>
+                    <td>2019</td>
+                    <td>$566</td>
+                </tr>
+                <tr>
+                    <td style="text-align: center">
+                        <a href="#">
+                            <img width="23" height="23" src="https://img.icons8.com/ios-filled/666666/23/delete-sign--v1.png" alt="filled-trash"/>
+                        </a>
+                    </td>
+                    <td>
+                        <div class="image-holder">
+                            <img src="http://127.0.0.1:4001/storage/media/2GKvTqbwntp5DnViZB7hpqBOgKKfShvmNnowyXju.png">
+                        </div>
+                    </td>
+                    <td>
+                        <a href="http://127.0.0.1:4001/en/ebooks/101-animals-stories">101 Animals Stories</a>
+                    </td>
+                    <td>2019</td>
+                    <td>$566</td>
+                </tr>
+                <tr style="font-weight: bold">
+                    <td></td>
+                    <td colspan="3">Total</td>
+                    <td>$566</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+</div>
 @endsection
