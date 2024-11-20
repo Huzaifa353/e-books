@@ -60,7 +60,6 @@
 @endif
 
 <script>
-    const ebookId = 1;
   // Add the CSRF token to JavaScript
   window.Laravel = { csrfToken1: '{{ csrf_token() }}', csrfToken2: '{{ csrf_token() }}' };
 </script>
@@ -77,15 +76,12 @@
 
       async createOrder() {
           try {
-              const response = await fetch("/api/paypal/orders", {
+              const response = await fetch("/api/paypal/order-cart", {
                   method: "POST",
                   headers: {
                       "Content-Type": "application/json",
                       "X-CSRF-TOKEN": window.Laravel.csrfToken1 
                   },
-                  body: JSON.stringify({
-                      ebookId: ebookId,
-                  }),
               });
 
               const orderData = await response.json();
@@ -101,15 +97,12 @@
 
       async onApprove(data) {
           try {
-              const response = await fetch(`/api/paypal/orders/${data.orderID}/capture`, {
+              const response = await fetch(`/api/paypal/order-cart/${data.orderID}/capture`, {
                   method: "POST",
                   headers: {
                       "Content-Type": "application/json",
                       "X-CSRF-TOKEN": window.Laravel.csrfToken2
                   },
-                  body: JSON.stringify({
-                      ebookId: ebookId,
-                  }),
               });
 
               const orderData = await response.json();

@@ -79,11 +79,8 @@ class PayPalController extends Controller
     }
     public function checkoutOrderPaypal(Request $request)
     {
-
         $user = auth()->user()->id;
         $ebookIds = Carts::where('user_id', $user)->pluck('ebook_id');
-       
-       
        
         $totalPrice = 0; // Initialize total price as numeric
 
