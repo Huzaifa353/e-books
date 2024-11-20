@@ -125,8 +125,28 @@ class CartController extends Controller
      * @param int $id
      * @return Renderable
      */
-    public function destroy($id)
+    public function destroy($ebookId)
     {
         //
+        $userId = auth()->user()->id;
+
+        if($userId){
+               // Check if the cart item already exists to prevent duplicates
+               $cartExists = Carts::where('id',$ebookId)
+               ->exists();
+
+            if (!$cartExists) {
+                redirect()->back()->with('error', 'Cart item does not exist');
+            }
+           
+        
+           // Delete the record
+            Carts::where('id',$ebookId)->delete();
+
+            
+            return redirect()->back()->with('success', 'Ebook removed from the cart successfully!');
+        }
+     
+
     }
 }

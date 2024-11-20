@@ -13,7 +13,7 @@
                 @foreach($ebooksInCart as $ebook)
                 <tr>
                     <td style="text-align: center">
-                        <a href="#" >
+                        <a href="{{route('cart.remove', $ebook->id)}}" >
                             <img width="23" height="23" src="https://img.icons8.com/ios-filled/666666/23/delete-sign--v1.png" alt="filled-trash"/>
                         </a>
                     </td>
@@ -30,7 +30,7 @@
                     <td>${{$ebook->ebook->price}}</td>
                 </tr>
                 @endforeach
-                <tr>
+                <!-- <tr>
                     <td style="text-align: center">
                         <a href="#">
                             <img width="23" height="23" src="https://img.icons8.com/ios-filled/666666/23/delete-sign--v1.png" alt="filled-trash"/>
@@ -63,7 +63,7 @@
                     </td>
                     <td>2019</td>
                     <td>$566</td>
-                </tr>
+                </tr> -->
                 <tr style="font-weight: bold">
                     <td></td>
                     <td colspan="3">Total</td>
