@@ -22,19 +22,25 @@ class CartController extends Controller
         $this->auth = $auth;
     }
     public function index()
-    {
-        $user = auth()->user();
-        $ebooksInCart = Carts::where([
-            'user_id' => $user->id
-        ])->get();
-        
-        $ebooksInCart->load('ebook');
-        $ebooks = $ebooksInCart->pluck('ebook');
-
-        $totalPrice = $ebooks->sum('price');
-
-        return view('public.cart.index', compact('ebooks', 'totalPrice'));
+{
+    // Check if the user is authenticated
+    if (!auth()->check()) {
+        // If the user is not authenticated, you can either redirect them or show an error message
+        return redirect()->route('login')->with('error', 'You must be logged in to view the cart.');
     }
+
+    $user = auth()->user();
+    $ebooksInCart = Carts::where('user_id', $user->id)->get();
+
+    // Eager load the related ebook data
+    $ebooksInCart->load('ebook');
+    $ebooks = $ebooksInCart->pluck('ebook');
+
+    // Calculate total price
+    $totalPrice = $ebooks->sum('price');
+
+    return view('public.cart.index', compact('ebooks', 'totalPrice'));
+}
 
     /**
      * Show the form for creating a new resource.
