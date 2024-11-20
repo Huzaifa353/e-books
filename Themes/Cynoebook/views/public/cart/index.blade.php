@@ -53,9 +53,9 @@
         
 @if(count($ebooks))
     <template>
-        <div>
-            <div id="paypal-button-container"></div>
-        </div>
+       
+            <div id="paypal-button-container"  class="custom-paypal-button" ></div>
+       
     </template>
 @endif
 
@@ -71,7 +71,7 @@
           shape: "rect",
           layout: "vertical",
           color: "gold",
-          label: "pay",
+          label: "checkout",
       },
 
       async createOrder() {
