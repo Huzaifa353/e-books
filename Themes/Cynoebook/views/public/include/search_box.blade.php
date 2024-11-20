@@ -74,6 +74,7 @@
 
 <a class="pull-right cart-icon" href={{route('cart.index')}}>
     <img width="24" height="24" src="https://img.icons8.com/material-rounded/dddddd/24/shopping-cart.png" alt="shopping-cart"/>
+    <span id="cart-item-count" class="badge"></span>
 </a>
     <div class="search-area pull-right">
 
@@ -124,6 +125,29 @@
             </div>
         </form>          
     </div>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    // Fetch the cart item count when the page loads
+    fetchCartItemCount();
+});
+
+// Function to fetch the cart item count
+function fetchCartItemCount() {
+    const url = "{{ url('/cart/count/') }}"; // Set the full URL dynamically using Blade
+    fetch(url)  // Make a GET request to the cart count route
+        .then(response => response.json())  // Parse the response as JSON
+        .then(data => {
+            // Update the cart item count in the UI
+            if (data.numberOfItems) {
+                document.getElementById('cart-item-count').textContent = data.numberOfItems;
+            } else {
+                document.getElementById('cart-item-count').textContent = 0; // If no items, show 0
+            }
+        })
+        .catch(error => {
+            console.error('Error fetching cart item count:', error);
+        });
+}
+        </script>
     
     

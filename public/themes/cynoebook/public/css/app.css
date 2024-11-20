@@ -85,4 +85,46 @@
     justify-content: center;
     align-items: end;
     padding: 6px 5px 6px 15px;
+    position: relative;
+    display: inline-block;
+    top:10px;
+}
+.custom-paypal-button {
+  /* Matching the yellow color */
+    color: #1a1a1a; /* Black text color */
+    font-family: 'Arial', sans-serif; /* Similar font */
+    font-weight: bold;
+    font-size: 16px;
+    text-align: center;
+    text-transform: uppercase; /* Capital letters */
+    padding: 12px 20px; /* Adjust spacing */
+    border: none; /* Remove default border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    display: inline-block; /* Ensures proper button layout */
+    float: right;
+    margin-right: 150px;;
+   
+}
+
+
+
+.custom-paypal-button:active {
+    background-color: #e0a83e; /* Even darker shade when clicked */
+    box-shadow: inset 0px 4px 6px rgba(0, 0, 0, 0.2); /* Inset shadow for pressed effect */
+}
+
+
+#cart-item-count {
+    position: absolute;
+    top: -5px; /* Adjust this value to move the count up/down */
+    right: -5px; /* Adjust this value to move the count left/right */
+    background-color: red; /* You can change this to your preferred color */
+    color: white;
+    font-size: 12px; /* Adjust font size */
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%; /* Makes the count a circle */
+    min-width: 18px; /* Ensure the badge has a minimum size */
+    text-align: center;
 }
