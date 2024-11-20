@@ -123,7 +123,35 @@ class PayPalController extends Controller
     }
 
     public function checkoutCaptureOrderPaypal(Request $request, $orderID)
-    {
-      
-    }
+{
+        $captureRequest = new OrdersCaptureRequest($orderID);
+        $captureRequest->prefer('return=representation');
+
+        // Fetch all ebook IDs from the user's cart
+        $userId = auth()->user()->id;
+        $ebookIds = Carts::where('user_id', $userId)->pluck('ebook_id');
+
+        try {
+            $response = $this->client->execute($captureRequest);
+
+            $paymentStatus = $response->result->purchase_units[0]->payments->captures[0]->status;
+
+            if ($paymentStatus === 'COMPLETED') {
+                $user = auth()->user();
+
+                // Process all ebooks as purchased
+                foreach ($ebookIds as $ebookId) {
+                    EbookController::buy($ebookId, $user->id);
+                }
+
+                // Optionally, clear the cart after successful purchase
+                Carts::where('user_id', $user->id)->delete();
+            }
+
+            return response()->json(['capture' => $response->result]);
+        } catch (HttpException $ex) {
+            return response()->json(['error' => $ex->getMessage()], 500);
+        }
+        }
+
 }
