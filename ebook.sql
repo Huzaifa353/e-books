@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Nov 11, 2024 at 03:21 PM
+-- Generation Time: Nov 20, 2024 at 02:45 PM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -91,7 +91,16 @@ INSERT INTO `activity_log` (`id`, `log_name`, `description`, `subject_id`, `subj
 (17, 'role', 'updated', 2, 'Modules\\User\\Entities\\Role', NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":2,\"slug\":\"user\",\"name\":\"User\",\"permissions\":[],\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-07T07:25:42.000000Z\"},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-07T06:52:17.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-07T06:52:17.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]}}', NULL, '2024-11-07 02:25:42', '2024-11-07 02:25:42'),
 (18, 'setting', 'updated', NULL, NULL, NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-07T06:52:17.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-07T06:52:17.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-07T06:52:17.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-07T06:52:17.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]}}', NULL, '2024-11-07 05:08:16', '2024-11-07 05:08:16'),
 (19, 'setting', 'updated', NULL, NULL, NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-07T06:52:17.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-07T06:52:17.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-07T06:52:17.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-07T06:52:17.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]}}', NULL, '2024-11-07 05:08:57', '2024-11-07 05:08:57'),
-(20, 'user', 'login', 1, 'Modules\\User\\Entities\\User', NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T09:54:59.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T09:54:59.000000Z\",\"full_name\":\"Huzaifa Shamoon\"},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T09:54:59.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T09:54:59.000000Z\",\"full_name\":\"Huzaifa Shamoon\"}}', NULL, '2024-11-11 04:54:59', '2024-11-11 04:54:59');
+(20, 'user', 'login', 1, 'Modules\\User\\Entities\\User', NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T09:54:59.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T09:54:59.000000Z\",\"full_name\":\"Huzaifa Shamoon\"},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T09:54:59.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T09:54:59.000000Z\",\"full_name\":\"Huzaifa Shamoon\"}}', NULL, '2024-11-11 04:54:59', '2024-11-11 04:54:59'),
+(21, 'user', 'login', 1, 'Modules\\User\\Entities\\User', NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T15:44:56.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T15:44:56.000000Z\",\"full_name\":\"Huzaifa Shamoon\"},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T15:44:56.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T15:44:56.000000Z\",\"full_name\":\"Huzaifa Shamoon\"}}', NULL, '2024-11-11 10:44:56', '2024-11-11 10:44:56'),
+(22, 'setting', 'updated', NULL, NULL, NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T15:44:56.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T15:44:56.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T15:44:56.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T15:44:56.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]}}', NULL, '2024-11-11 10:45:20', '2024-11-11 10:45:20'),
+(23, 'setting', 'updated', NULL, NULL, NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T15:44:56.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T15:44:56.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T15:44:56.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T15:44:56.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]}}', NULL, '2024-11-11 10:51:48', '2024-11-11 10:51:48'),
+(24, 'setting', 'updated', NULL, NULL, NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T15:44:56.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T15:44:56.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T15:44:56.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T15:44:56.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]}}', NULL, '2024-11-11 10:53:16', '2024-11-11 10:53:16'),
+(25, 'user', 'login', 1, 'Modules\\User\\Entities\\User', NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T15:59:16.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T15:59:16.000000Z\",\"full_name\":\"Huzaifa Shamoon\"},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T15:59:16.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T15:59:16.000000Z\",\"full_name\":\"Huzaifa Shamoon\"}}', NULL, '2024-11-11 10:59:16', '2024-11-11 10:59:16'),
+(26, 'menu', 'updated', 1, 'Modules\\Menu\\Entities\\Menu', NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"is_active\":true,\"created_at\":\"2019-07-23T04:40:47.000000Z\",\"updated_at\":\"2019-07-23T04:40:47.000000Z\",\"name\":\"Main Menu\",\"translations\":[{\"id\":1,\"menu_id\":1,\"locale\":\"en\",\"name\":\"Main Menu\"}]},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-11T15:59:16.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-11T15:59:16.000000Z\",\"full_name\":\"Huzaifa Shamoon\",\"roles\":[{\"id\":1,\"slug\":\"admin\",\"name\":\"Admin\",\"permissions\":{\"admin.users.index\":true,\"admin.users.create\":true,\"admin.users.edit\":true,\"admin.users.destroy\":true,\"admin.roles.index\":true,\"admin.roles.create\":true,\"admin.roles.edit\":true,\"admin.roles.destroy\":true,\"admin.menus.index\":true,\"admin.menus.create\":true,\"admin.menus.edit\":true,\"admin.menus.destroy\":true,\"admin.menu_items.index\":true,\"admin.menu_items.create\":true,\"admin.menu_items.edit\":true,\"admin.menu_items.destroy\":true,\"admin.files.index\":true,\"admin.files.create\":true,\"admin.files.destroy\":true,\"admin.pages.index\":true,\"admin.pages.create\":true,\"admin.pages.edit\":true,\"admin.pages.destroy\":true,\"admin.translations.index\":true,\"admin.translations.edit\":true,\"admin.settings.edit\":true,\"admin.ebooks.index\":true,\"admin.ebooks.create\":true,\"admin.ebooks.edit\":true,\"admin.ebooks.destroy\":true,\"admin.reportedebooks.index\":true,\"admin.reportedebooks.destroy\":true,\"admin.reviews.index\":true,\"admin.reviews.create\":true,\"admin.reviews.edit\":true,\"admin.reviews.destroy\":true,\"admin.importer.index\":true,\"admin.importer.create\":true,\"admin.sliders.index\":true,\"admin.sliders.create\":true,\"admin.sliders.edit\":true,\"admin.sliders.destroy\":true,\"admin.categories.index\":true,\"admin.categories.create\":true,\"admin.categories.edit\":true,\"admin.categories.destroy\":true,\"admin.authors.index\":true,\"admin.authors.create\":true,\"admin.authors.edit\":true,\"admin.authors.destroy\":true,\"admin.activity.index\":true,\"admin.cynoebook.edit\":true,\"admin.comment.index\":true,\"admin.comment.create\":true,\"admin.comment.edit\":true,\"admin.comment.destroy\":true},\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\",\"pivot\":{\"user_id\":1,\"role_id\":1,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-06T08:30:20.000000Z\"}}]}}', NULL, '2024-11-11 11:00:20', '2024-11-11 11:00:20'),
+(27, 'user', 'login', 1, 'Modules\\User\\Entities\\User', NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-19T13:24:39.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-19T13:24:39.000000Z\",\"full_name\":\"Huzaifa Shamoon\"},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-19T13:24:39.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-19T13:24:39.000000Z\",\"full_name\":\"Huzaifa Shamoon\"}}', NULL, '2024-11-19 08:24:39', '2024-11-19 08:24:39'),
+(28, 'user', 'login', 1, 'Modules\\User\\Entities\\User', NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-20T06:57:35.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-20T06:57:35.000000Z\",\"full_name\":\"Huzaifa Shamoon\"},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-20T06:57:35.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-20T06:57:35.000000Z\",\"full_name\":\"Huzaifa Shamoon\"}}', NULL, '2024-11-20 01:57:35', '2024-11-20 01:57:35'),
+(29, 'user', 'login', 1, 'Modules\\User\\Entities\\User', NULL, 1, 'Modules\\User\\Entities\\User', '{\"subject\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-20T13:15:27.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-20T13:15:27.000000Z\",\"full_name\":\"Huzaifa Shamoon\"},\"causer\":{\"id\":1,\"first_name\":\"Huzaifa\",\"last_name\":\"Shamoon\",\"username\":\"Admin\",\"email\":\"admin@gmail.com\",\"permissions\":null,\"last_login\":\"2024-11-20T13:15:27.000000Z\",\"about\":null,\"facebook\":null,\"twitter\":null,\"google\":null,\"instagram\":null,\"linkedin\":null,\"youtube\":null,\"created_at\":\"2024-11-06T08:30:20.000000Z\",\"updated_at\":\"2024-11-20T13:15:27.000000Z\",\"full_name\":\"Huzaifa Shamoon\"}}', NULL, '2024-11-20 08:15:27', '2024-11-20 08:15:27');
 
 -- --------------------------------------------------------
 
@@ -154,6 +163,27 @@ INSERT INTO `author_translations` (`id`, `author_id`, `locale`, `name`, `descrip
 (33, 34, 'en', 'Niks Vags', NULL),
 (35, 36, 'en', 'Edmundo de Amicis', NULL),
 (40, 41, 'en', 'Robert T. Kiyosaki', NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `carts`
+--
+
+CREATE TABLE `carts` (
+  `id` bigint UNSIGNED NOT NULL,
+  `user_id` int NOT NULL,
+  `ebook_id` int NOT NULL,
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `carts`
+--
+
+INSERT INTO `carts` (`id`, `user_id`, `ebook_id`, `created_at`, `updated_at`) VALUES
+(11, 1, 4, '2024-11-20 04:27:22', '2024-11-20 04:27:22');
 
 -- --------------------------------------------------------
 
@@ -327,13 +357,13 @@ CREATE TABLE `ebooks` (
 
 INSERT INTO `ebooks` (`id`, `user_id`, `slug`, `file_type`, `file_url`, `embed_code`, `isbn`, `price`, `buy_url`, `publication_year`, `book_edition`, `number_of_pages`, `book_language`, `country_origin`, `viewed`, `download`, `password`, `is_featured`, `is_private`, `is_active`, `deleted_at`, `created_at`, `updated_at`) VALUES
 (1, 1, 'spider-man-far-from-home', 'upload', NULL, NULL, '978-3-16-148410-0', '320', NULL, '2019', NULL, NULL, NULL, NULL, 5278, 10, 'admin123', 1, 0, 1, NULL, '2019-07-22 08:02:20', '2024-11-07 05:11:56'),
-(2, 1, '101-animals-stories', 'upload', NULL, NULL, '978-3-18-15453-0', '260', NULL, '2019', NULL, NULL, NULL, NULL, 1287, 100, NULL, 1, 0, 1, NULL, '2019-07-23 01:58:50', '2022-01-21 00:30:53'),
-(3, 1, 'the-eternals', 'upload', NULL, NULL, '896-3-16-458236-0', '340', '#', '2012', NULL, NULL, NULL, NULL, 821, 65, NULL, 1, 0, 1, NULL, '2019-07-23 04:45:38', '2022-03-07 18:59:05'),
-(4, 1, 'mighty-thor', 'upload', NULL, NULL, '652-3-16-789123-0', '130', '#', '2015', NULL, NULL, NULL, NULL, 1008, 51, NULL, 1, 0, 1, NULL, '2019-07-23 04:49:48', '2022-03-07 01:30:22'),
-(5, 1, 'secret-wars', 'upload', NULL, NULL, '652-3-16-895623-0', '390', '#', '2016', NULL, NULL, NULL, NULL, 850, 66, NULL, 1, 0, 1, NULL, '2019-07-23 04:54:02', '2024-11-11 10:09:57'),
+(2, 1, '101-animals-stories', 'upload', NULL, NULL, '978-3-18-15453-0', '260', NULL, '2019', NULL, NULL, NULL, NULL, 1292, 100, NULL, 1, 0, 1, NULL, '2019-07-23 01:58:50', '2024-11-20 03:05:35'),
+(3, 1, 'the-eternals', 'upload', NULL, NULL, '896-3-16-458236-0', '340', '#', '2012', NULL, NULL, NULL, NULL, 828, 65, NULL, 1, 0, 1, NULL, '2019-07-23 04:45:38', '2024-11-20 05:08:35'),
+(4, 1, 'mighty-thor', 'upload', NULL, NULL, '652-3-16-789123-0', '130', '#', '2015', NULL, NULL, NULL, NULL, 1072, 51, NULL, 1, 0, 1, NULL, '2019-07-23 04:49:48', '2024-11-20 04:27:29'),
+(5, 1, 'secret-wars', 'upload', NULL, NULL, '652-3-16-895623-0', '390', '#', '2016', NULL, NULL, NULL, NULL, 863, 66, NULL, 1, 0, 1, NULL, '2019-07-23 04:54:02', '2024-11-20 09:44:49'),
 (6, 1, 'batman-last-knight-on-earth', 'upload', NULL, NULL, '123-3-16-452178-0', '380', NULL, '2019', NULL, NULL, NULL, NULL, 772, 65, NULL, 0, 0, 1, NULL, '2019-07-23 05:00:29', '2021-03-22 06:09:42'),
 (7, 1, 'star-wars-darth-vader-dark-lord-of-the-sith', 'upload', NULL, NULL, '753-3-16-951235-0', '360', NULL, '2017', NULL, NULL, NULL, NULL, 678, 43, NULL, 0, 0, 1, NULL, '2019-07-23 05:03:07', '2022-07-20 23:56:35'),
-(8, 1, 'batman-damned', 'upload', NULL, NULL, '014-3-16-569874-0', '240', NULL, '2019', NULL, NULL, NULL, NULL, 566, 48, NULL, 0, 0, 1, NULL, '2019-07-23 05:10:29', '2022-01-21 00:33:09'),
+(8, 1, 'batman-damned', 'upload', NULL, NULL, '014-3-16-569874-0', '240', NULL, '2019', NULL, NULL, NULL, NULL, 567, 48, NULL, 0, 0, 1, NULL, '2019-07-23 05:10:29', '2024-11-20 03:10:37'),
 (9, 1, 'article-5', 'upload', NULL, NULL, '987-3-16-152036-0', '100', '#', '2012', NULL, NULL, NULL, NULL, 923, 51, NULL, 0, 0, 1, NULL, '2019-07-23 05:23:10', '2024-11-07 05:12:19'),
 (10, 1, 'my-first-book-of-patterns-capital-letters', 'upload', NULL, NULL, '983-3-16-452178-0', '200', '#', '2018', NULL, NULL, NULL, NULL, 437, 23, NULL, 0, 0, 1, NULL, '2019-07-23 05:31:55', '2021-03-23 05:26:29'),
 (11, 1, 'famous-indian-recipes', 'upload', NULL, NULL, '980-3-16-452103-0', '280', '#', '2012', NULL, NULL, NULL, NULL, 310, 29, NULL, 0, 0, 1, NULL, '2019-07-23 05:45:22', '2021-03-22 09:59:30'),
@@ -347,7 +377,7 @@ INSERT INTO `ebooks` (`id`, `user_id`, `slug`, `file_type`, `file_url`, `embed_c
 (19, 1, 'the-politics-of-women-s-interests', 'upload', NULL, NULL, '123-3-16-452178-0', '130', NULL, '2006', NULL, NULL, NULL, NULL, 170, 13, NULL, 0, 0, 1, NULL, '2019-07-23 06:51:32', '2022-01-21 01:29:52'),
 (20, 1, 'the-one-minute-manager', 'upload', NULL, NULL, '123-3-16-452178-0', '320', NULL, '2015', NULL, NULL, NULL, NULL, 254, 18, NULL, 0, 0, 1, NULL, '2019-07-23 06:59:02', '2022-01-21 01:30:10'),
 (21, 1, 'target-manager', 'upload', NULL, NULL, '123-3-16-452178-0', '50', NULL, '2018', NULL, NULL, NULL, NULL, 248, 19, NULL, 0, 0, 1, NULL, '2019-07-23 07:02:38', '2022-01-21 01:30:33'),
-(22, 1, 'making-lifestyle-changes-10-steps-to-help-you-succeed', 'upload', NULL, NULL, 'sadfsafdfdsg', '60', '#', '2019', NULL, NULL, NULL, NULL, 3749, 117, NULL, 0, 0, 1, NULL, '2019-07-23 07:12:51', '2022-02-22 20:41:45'),
+(22, 1, 'making-lifestyle-changes-10-steps-to-help-you-succeed', 'upload', NULL, NULL, 'sadfsafdfdsg', '60', '#', '2019', NULL, NULL, NULL, NULL, 3751, 117, NULL, 0, 0, 1, NULL, '2019-07-23 07:12:51', '2024-11-20 03:06:48'),
 (23, 1, 'dark-money', 'upload', NULL, NULL, '123-3-16-452178-0', '140', NULL, '2016', NULL, NULL, NULL, NULL, 237, 13, NULL, 0, 0, 1, NULL, '2019-07-23 07:23:22', '2022-07-14 19:30:04'),
 (24, 1, 'success-through-a-positive', 'upload', NULL, NULL, '123-3-16-452178-0', '90', NULL, '2018', NULL, NULL, NULL, NULL, 230, 13, NULL, 0, 0, 1, NULL, '2019-07-23 07:24:01', '2022-01-21 01:41:16'),
 (25, 1, 'steve-jobs', 'upload', NULL, NULL, '123-3-16-452178-0', '60', NULL, '2016', NULL, NULL, NULL, NULL, 315, 21, NULL, 0, 0, 1, NULL, '2019-07-23 08:09:08', '2022-01-21 01:31:57'),
@@ -572,7 +602,9 @@ INSERT INTO `ebook_views` (`id`, `ebook_id`, `user_id`, `created_at`, `updated_a
 (6, 4, 1, '2022-03-07 01:29:13', '2022-03-07 01:29:13'),
 (7, 7, 1, '2022-07-20 23:56:35', '2022-07-20 23:56:35'),
 (8, 1, 1, '2024-11-07 05:11:56', '2024-11-07 05:11:56'),
-(9, 9, 1, '2024-11-07 05:12:19', '2024-11-07 05:12:19');
+(9, 9, 1, '2024-11-07 05:12:19', '2024-11-07 05:12:19'),
+(10, 2, 1, '2024-11-20 02:59:10', '2024-11-20 02:59:10'),
+(11, 8, 1, '2024-11-20 03:10:37', '2024-11-20 03:10:37');
 
 -- --------------------------------------------------------
 
@@ -778,7 +810,6 @@ INSERT INTO `menu_items` (`id`, `menu_id`, `parent_id`, `category_id`, `page_id`
 (3, 1, 1, NULL, NULL, 'url', '/ebooks', '_self', 2, 0, 0, 1, '2019-07-22 23:43:26', '2020-02-10 23:31:04'),
 (4, 1, 1, NULL, 1, 'page', NULL, '_self', 1, 0, 0, 1, '2019-07-22 23:43:41', '2020-02-10 23:31:04'),
 (5, 1, 1, NULL, 4, 'page', NULL, '_self', 4, 0, 0, 1, '2019-07-22 23:44:29', '2020-02-10 23:32:39'),
-(6, 1, 1, NULL, NULL, 'url', '/ebook/upload', '_self', 3, 0, 0, 1, '2019-07-22 23:44:59', '2020-02-10 23:32:39'),
 (7, 2, NULL, NULL, NULL, 'URL', NULL, '_self', 0, 1, 0, 1, '2019-07-23 00:44:50', '2019-07-23 00:44:50'),
 (8, 2, 7, 1, NULL, 'category', NULL, '_self', 1, 0, 0, 1, '2019-07-23 00:45:17', '2020-02-26 22:52:22'),
 (9, 2, 7, 2, NULL, 'category', NULL, '_self', 2, 0, 0, 1, '2019-07-23 00:45:33', '2020-02-26 22:52:22'),
@@ -827,10 +858,9 @@ CREATE TABLE `menu_item_translations` (
 INSERT INTO `menu_item_translations` (`id`, `menu_item_id`, `locale`, `name`) VALUES
 (1, 1, 'en', 'root'),
 (2, 2, 'en', 'Home'),
-(3, 3, 'en', 'eBooks'),
+(3, 3, 'en', 'Documents'),
 (4, 4, 'en', 'About Us'),
 (5, 5, 'en', 'Faq'),
-(6, 6, 'en', 'Upload eBook'),
 (7, 7, 'en', 'root'),
 (8, 8, 'en', 'Articles'),
 (9, 9, 'en', 'Arts & Music'),
@@ -1043,7 +1073,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (39, '2022_02_21_163319_create_ebook_views_table', 1),
 (40, '2022_12_19_100519_add_batch_uuid_column_to_activity_log_table', 1),
 (41, '2022_12_19_100519_add_event_column_to_activity_log_table', 1),
-(42, '2024_11_07_080900_create_user_ebook_table', 2);
+(42, '2024_11_07_080900_create_user_ebook_table', 2),
+(43, '2024_11_19_132127_create_carts_table', 3);
 
 -- --------------------------------------------------------
 
@@ -1115,7 +1146,10 @@ CREATE TABLE `persistences` (
 
 INSERT INTO `persistences` (`id`, `user_id`, `code`, `created_at`, `updated_at`) VALUES
 (1, 1, 'BrxbQu497JV1YewTMwQ79KNeLTeXumMY', '2024-11-07 01:52:17', '2024-11-07 01:52:17'),
-(3, 1, 'vGdV5OqNbm60XeqxbBNbRBLu4orBE10E', '2024-11-11 04:54:59', '2024-11-11 04:54:59');
+(5, 1, 'DZjBraSUftGh20N0IbjFRY0V5A3VOLwc', '2024-11-11 10:59:16', '2024-11-11 10:59:16'),
+(6, 1, 'JmfKClB34WM42bczKVkPJ0pTh4P41VnK', '2024-11-19 08:24:39', '2024-11-19 08:24:39'),
+(7, 1, 's3U0VWAOdDo7w5Ha10Q36Dfc7nS7wNF9', '2024-11-20 01:57:35', '2024-11-20 01:57:35'),
+(8, 1, 'MCGtpPw6WhOq4prm7UHV1R3e3MLMDQJ4', '2024-11-20 08:15:27', '2024-11-20 08:15:27');
 
 -- --------------------------------------------------------
 
@@ -1404,10 +1438,10 @@ INSERT INTO `settings` (`id`, `name`, `plainValue`, `isTranslatable`, `created_a
 (138, 'cynoebook_category_tabs_section_tab_5_total_ebooks', 'N;', 0, '2020-04-15 00:10:25', '2020-04-15 01:40:55'),
 (139, 'cynoebook_authors_section_title', NULL, 1, '2020-04-27 00:37:44', '2020-04-27 00:37:44'),
 (140, 'cynoebook_users_section_title', NULL, 1, '2020-04-27 00:37:44', '2020-04-27 00:37:44'),
-(141, 'cynoebook_authors_section_enabled', 's:1:\"1\";', 0, '2020-04-27 00:37:45', '2020-04-27 00:58:21'),
+(141, 'cynoebook_authors_section_enabled', 's:1:\"0\";', 0, '2020-04-27 00:37:45', '2024-11-20 08:18:52'),
 (142, 'cynoebook_authors_order_by', 's:17:\"top_by_book_count\";', 0, '2020-04-27 00:37:45', '2020-04-27 00:44:28'),
 (143, 'cynoebook_authors_section_total_authors', 's:1:\"4\";', 0, '2020-04-27 00:37:45', '2020-04-27 00:43:02'),
-(144, 'cynoebook_users_section_enabled', 's:1:\"1\";', 0, '2020-04-27 00:37:45', '2020-04-27 00:51:15'),
+(144, 'cynoebook_users_section_enabled', 's:1:\"0\";', 0, '2020-04-27 00:37:45', '2024-11-20 08:18:48'),
 (145, 'cynoebook_users_order_by', 's:17:\"top_by_book_count\";', 0, '2020-04-27 00:37:46', '2020-04-27 00:52:01'),
 (146, 'cynoebook_users_section_total_authors', 's:1:\"4\";', 0, '2020-04-27 00:37:46', '2020-04-27 00:51:38'),
 (147, 'cookie_bar_enabled', 's:1:\"1\";', 0, '2021-03-23 05:30:20', '2021-03-23 05:40:37'),
@@ -1456,7 +1490,7 @@ CREATE TABLE `setting_translations` (
 --
 
 INSERT INTO `setting_translations` (`id`, `setting_id`, `locale`, `value`) VALUES
-(1, 1, 'en', 's:5:\"eBook\";'),
+(1, 1, 'en', 's:10:\"Adam eBook\";'),
 (2, 39, 'en', 's:151:\"Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s\";'),
 (3, 13, 'en', 's:61:\"Copyright © {{ site_name }} {{ year }}. All rights reserved.\";'),
 (4, 40, 'en', 's:14:\"ALL Categories\";'),
@@ -1471,14 +1505,14 @@ INSERT INTO `setting_translations` (`id`, `setting_id`, `locale`, `value`) VALUE
 (13, 49, 'en', 's:12:\"Member Only!\";'),
 (14, 50, 'en', 's:16:\"Protected eBooks\";'),
 (15, 51, 'en', 's:18:\"Password Protected\";'),
-(16, 52, 'en', 's:15:\"Featured eBooks\";'),
+(16, 52, 'en', 's:18:\"Featured Documents\";'),
 (17, 53, 'en', 's:3:\"253\";'),
-(18, 54, 'en', 's:13:\"Comics eBooks\";'),
+(18, 54, 'en', 's:16:\"Comics Documents\";'),
 (19, 55, 'en', 's:35:\"With full of new adventures stories\";'),
 (20, 56, 'en', 's:8:\"View all\";'),
-(21, 57, 'en', 's:13:\"Recent eBooks\";'),
+(21, 57, 'en', 's:16:\"Recent Documents\";'),
 (22, 58, 'en', 's:3:\"253\";'),
-(23, 59, 'en', 's:14:\"Business eBook\";'),
+(23, 59, 'en', 's:18:\"Business Documents\";'),
 (24, 60, 'en', 's:42:\"How to raise your business to the up level\";'),
 (25, 61, 'en', 's:8:\"View All\";'),
 (26, 101, 'en', 's:1:\"5\";'),
@@ -1490,7 +1524,7 @@ INSERT INTO `setting_translations` (`id`, `setting_id`, `locale`, `value`) VALUE
 (32, 109, 'en', 's:3:\"259\";'),
 (33, 111, 'en', 's:262:\"<p><strong>Address : </strong> 4850 Angus Road, New York, New York - 10022</p>\r\n<p><strong>Mail us : </strong><a title=\"Mail to: yourmail@domain.com\" href=\"mailto:yourmail@domain.com\">yourmail@domain.com</a></p>\r\n<p><strong>Phone : </strong>+1 23 456 789 012</p>\";'),
 (34, 112, 'en', 's:12:\"Contact Info\";'),
-(65, 118, 'en', 's:14:\"Popular eBooks\";'),
+(65, 118, 'en', 's:17:\"Popular Documents\";'),
 (66, 122, 'en', 's:18:\"Popular Categories\";'),
 (67, 123, 'en', 's:6:\"Comics\";'),
 (68, 124, 'en', 's:12:\"Arts & Music\";'),
@@ -1621,7 +1655,16 @@ INSERT INTO `throttle` (`id`, `user_id`, `type`, `ip`, `created_at`, `updated_at
 (3, 1, 'user', NULL, '2024-11-07 01:52:11', '2024-11-07 01:52:11'),
 (4, NULL, 'global', NULL, '2024-11-11 04:54:48', '2024-11-11 04:54:48'),
 (5, NULL, 'ip', '127.0.0.1', '2024-11-11 04:54:48', '2024-11-11 04:54:48'),
-(6, 1, 'user', NULL, '2024-11-11 04:54:48', '2024-11-11 04:54:48');
+(6, 1, 'user', NULL, '2024-11-11 04:54:48', '2024-11-11 04:54:48'),
+(7, NULL, 'global', NULL, '2024-11-19 08:24:34', '2024-11-19 08:24:34'),
+(8, NULL, 'ip', '127.0.0.1', '2024-11-19 08:24:34', '2024-11-19 08:24:34'),
+(9, 1, 'user', NULL, '2024-11-19 08:24:34', '2024-11-19 08:24:34'),
+(10, NULL, 'global', NULL, '2024-11-20 01:57:26', '2024-11-20 01:57:26'),
+(11, NULL, 'ip', '127.0.0.1', '2024-11-20 01:57:26', '2024-11-20 01:57:26'),
+(12, 1, 'user', NULL, '2024-11-20 01:57:26', '2024-11-20 01:57:26'),
+(13, NULL, 'global', NULL, '2024-11-20 01:57:31', '2024-11-20 01:57:31'),
+(14, NULL, 'ip', '127.0.0.1', '2024-11-20 01:57:31', '2024-11-20 01:57:31'),
+(15, 1, 'user', NULL, '2024-11-20 01:57:31', '2024-11-20 01:57:31');
 
 -- --------------------------------------------------------
 
@@ -1636,6 +1679,13 @@ CREATE TABLE `translations` (
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
+--
+-- Dumping data for table `translations`
+--
+
+INSERT INTO `translations` (`id`, `key`, `created_at`, `updated_at`) VALUES
+(1, 'eBook', NULL, NULL);
+
 -- --------------------------------------------------------
 
 --
@@ -1648,6 +1698,13 @@ CREATE TABLE `translation_translations` (
   `locale` varchar(191) COLLATE utf8mb4_unicode_ci NOT NULL,
   `value` text COLLATE utf8mb4_unicode_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `translation_translations`
+--
+
+INSERT INTO `translation_translations` (`id`, `translation_id`, `locale`, `value`) VALUES
+(1, 1, 'Document', '');
 
 -- --------------------------------------------------------
 
@@ -1680,7 +1737,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `first_name`, `last_name`, `username`, `email`, `password`, `permissions`, `last_login`, `about`, `facebook`, `twitter`, `google`, `instagram`, `linkedin`, `youtube`, `created_at`, `updated_at`) VALUES
-(1, 'Huzaifa', 'Shamoon', 'Admin', 'admin@gmail.com', '$2y$10$qLFUhrIPC5PvAqmxqdmdk.IENZKEVOPIJH6SQQCuGZ3pOAg44TSTi', NULL, '2024-11-11 09:54:59', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2024-11-06 03:30:20', '2024-11-11 04:54:59'),
+(1, 'Huzaifa', 'Shamoon', 'Admin', 'admin@gmail.com', '$2y$10$qLFUhrIPC5PvAqmxqdmdk.IENZKEVOPIJH6SQQCuGZ3pOAg44TSTi', NULL, '2024-11-20 13:15:27', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2024-11-06 03:30:20', '2024-11-20 08:15:27'),
 (3, 'Sufyan', 'Khanzada', 'sufyan', 'sufyan@gmail.com', '$2y$10$FQKWy9r31U0lTApOsO4Mue1hNRCu..bLL78tCx616YFq17aunVRGm', '[]', '2024-11-07 07:16:25', NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2024-11-07 02:15:45', '2024-11-07 02:25:36');
 
 -- --------------------------------------------------------
@@ -1703,7 +1760,9 @@ CREATE TABLE `user_ebook` (
 --
 
 INSERT INTO `user_ebook` (`id`, `user_id`, `ebook_id`, `purchased`, `created_at`, `updated_at`) VALUES
-(2, 1, 5, 0, NULL, NULL);
+(2, 1, 5, 1, NULL, NULL),
+(3, 1, 2, 1, NULL, NULL),
+(4, 1, 8, 1, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -1758,6 +1817,12 @@ ALTER TABLE `authors`
 ALTER TABLE `author_translations`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `author_translations_author_id_locale_unique` (`author_id`,`locale`);
+
+--
+-- Indexes for table `carts`
+--
+ALTER TABLE `carts`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `categories`
@@ -2053,7 +2118,7 @@ ALTER TABLE `activations`
 -- AUTO_INCREMENT for table `activity_log`
 --
 ALTER TABLE `activity_log`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 
 --
 -- AUTO_INCREMENT for table `authors`
@@ -2066,6 +2131,12 @@ ALTER TABLE `authors`
 --
 ALTER TABLE `author_translations`
   MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+
+--
+-- AUTO_INCREMENT for table `carts`
+--
+ALTER TABLE `carts`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT for table `categories`
@@ -2107,7 +2178,7 @@ ALTER TABLE `ebook_translations`
 -- AUTO_INCREMENT for table `ebook_views`
 --
 ALTER TABLE `ebook_views`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `entity_files`
@@ -2161,7 +2232,7 @@ ALTER TABLE `meta_data_translations`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=44;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -2179,7 +2250,7 @@ ALTER TABLE `page_translations`
 -- AUTO_INCREMENT for table `persistences`
 --
 ALTER TABLE `persistences`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT for table `reminders`
@@ -2245,19 +2316,19 @@ ALTER TABLE `slider_translations`
 -- AUTO_INCREMENT for table `throttle`
 --
 ALTER TABLE `throttle`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `translations`
 --
 ALTER TABLE `translations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `translation_translations`
 --
 ALTER TABLE `translation_translations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -2269,7 +2340,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `user_ebook`
 --
 ALTER TABLE `user_ebook`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- Constraints for dumped tables

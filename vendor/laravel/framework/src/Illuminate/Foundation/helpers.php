@@ -935,7 +935,11 @@ if (! function_exists('trans')) {
             return app('translator');
         }
 
-        return app('translator')->get($key, $replace, $locale);
+        $translated = app('translator')->get($key, $replace, $locale);
+        $updatedTranslated = str_replace('eBook', 'Document', $translated);
+        $updatedTranslated = str_ireplace('ebook', 'document', $updatedTranslated);
+
+        return $updatedTranslated;
     }
 }
 
