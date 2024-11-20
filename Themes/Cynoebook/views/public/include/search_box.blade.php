@@ -73,7 +73,7 @@
 </div>
 
 <a class="pull-right cart-icon" href={{route('cart.index')}}>
-    <img width="24" height="24" src="https://img.icons8.com/material-rounded/dddddd/24/shopping-cart.png" alt="shopping-cart"/>
+    <img width="24" height="24" src="https://img.icons8.com/material-outlined/dddddd/24/shopping-cart.png" alt="shopping-cart"/>
     <span id="cart-item-count" class="badge"></span>
 </a>
     <div class="search-area pull-right">

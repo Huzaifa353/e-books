@@ -117,14 +117,17 @@
 
 #cart-item-count {
     position: absolute;
-    top: -5px; /* Adjust this value to move the count up/down */
-    right: -5px; /* Adjust this value to move the count left/right */
-    background-color: red; /* You can change this to your preferred color */
+    top: -5px;
+    right: -5px;
+    background-color: #ff4949;
     color: white;
-    font-size: 12px; /* Adjust font size */
+    font-size: 12px;
     font-weight: bold;
-    padding: 2px 6px;
-    border-radius: 50%; /* Makes the count a circle */
-    min-width: 18px; /* Ensure the badge has a minimum size */
-    text-align: center;
+    padding: 0;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
