@@ -101,9 +101,6 @@
                 </span>
             @endif
 
-
-
-
             <div class="clearfix"></div> 
 
             @if (! is_null($ebook->book_edition))
@@ -191,7 +188,7 @@
                                 <i class="fa fa-heart-o" aria-hidden="true"></i>
                             </button>
                         </form>
-                    @endif  
+                    @endif
                 </span>
                 
             
