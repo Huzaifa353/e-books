@@ -195,7 +195,7 @@
                 @if(setting('enable_ebook_report'))
                     @auth
                     <button type="button" id="btn-reportBook" class="btn btn-primary btn-sm btn-right-actions"  data-target="#reportBook" data-toggle="tooltip" data-placement="top" title="{{ clean(trans('cynoebook::ebook.report')) }}"><i class="fa fa-flag" aria-hidden="true" ></i></button>
-                    @include('public.ebooks.partials.ebook.report.report')
+                        @include('public.ebooks.partials.ebook.report.report')
                     @endauth
                 @endif
                 
