@@ -27,8 +27,13 @@ class CartController extends Controller
         $ebooksInCart = Carts::where([
             'user_id' => $user->id
         ])->get();
+        
+        $ebooksInCart->load('ebook');
+        $ebooks = $ebooksInCart->pluck('ebook');
 
-        return view('public.cart.index', compact('ebooksInCart'));
+        $totalPrice = $ebooks->sum('price');
+
+        return view('public.cart.index', compact('ebooks', 'totalPrice'));
     }
 
     /**

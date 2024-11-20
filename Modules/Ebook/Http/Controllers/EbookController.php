@@ -417,7 +417,7 @@ class EbookController extends Controller
             $availableFiles = $this->getBookFile($ebook);
         }
 
-        $ebookInCart = Carts::where(['user_id' => $user->id, 'ebook_id' => $ebook->id])->exists();
+        $ebookInCart = $user ? Carts::where(['user_id' => $user->id, 'ebook_id' => $ebook->id])->exists(): false;
 
         return view('public.ebooks.show', compact('ebook','reviews','relatedEbooks','unlock','availableFiles','ebookPurchased', 'ebookInCart'));
 
