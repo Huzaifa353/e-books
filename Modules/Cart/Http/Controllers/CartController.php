@@ -132,7 +132,7 @@ class CartController extends Controller
 
         if($userId){
                // Check if the cart item already exists to prevent duplicates
-               $cartExists = Carts::where('id',$ebookId)
+               $cartExists = Carts::where('ebook_id',$ebookId)
                ->exists();
 
             if (!$cartExists) {
@@ -141,7 +141,7 @@ class CartController extends Controller
            
         
            // Delete the record
-            Carts::where('id',$ebookId)->delete();
+            Carts::where('ebook_id',$ebookId)->delete();
 
             
             return redirect()->back()->with('success', 'Ebook removed from the cart successfully!');
