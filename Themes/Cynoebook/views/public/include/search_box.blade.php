@@ -11,8 +11,6 @@
         @endauth  
         <span class="caret"></span>
     </a>
-    
-    
 
     <ul class="dropdown-menu" aria-labelledby="my-account-hl">
     @auth
@@ -73,6 +71,10 @@
     @endauth
     </ul>
 </div>
+
+<a class="pull-right cart-icon" href={{route('cart.index')}}>
+    <img width="24" height="24" src="https://img.icons8.com/material-rounded/dddddd/24/shopping-cart.png" alt="shopping-cart"/>
+</a>
     <div class="search-area pull-right">
 
         <form action="{{ (request()->has('category') && isset($slug) &&  $slug!='' ) ? route('categories.index',$slug) : route('ebooks.index') }}" method="GET" id="search-box-form">  

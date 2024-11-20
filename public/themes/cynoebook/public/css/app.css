@@ -78,3 +78,11 @@
     text-decoration: none;
     color: #262938;
 }
+
+.cart-icon {
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    padding: 6px 5px 6px 15px;
+}
