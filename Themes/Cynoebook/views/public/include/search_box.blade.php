@@ -142,6 +142,7 @@ function fetchCartItemCount() {
                 document.getElementById('cart-item-count').textContent = data.numberOfItems;
             } else {
                 document.getElementById('cart-item-count').textContent = 0; // If no items, show 0
+                cartItemCountElement.style.display = 'none';  // Hide the count span
             }
         })
         .catch(error => {
