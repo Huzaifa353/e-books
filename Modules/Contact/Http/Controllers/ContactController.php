@@ -33,11 +33,12 @@ class ContactController extends Controller
                 ->from($request->email,$request->first_name." ".$request->last_name)
                 ->to(setting('site_email'));
         }); */
-		Mail::raw($request->message, function (Message $message) use ($request) {
-			$message->subject('Contact Us - '.$request->subject)
-				->replyTo($request->email)
-				->to(setting('site_email'));
-		});
+		 Mail::raw($request->message, function (Message $message) use ($request) {
+        $message->subject('Contact Us - ' . $request->subject)
+            ->from('info@soccerfonts.com', 'Soccer Fonts App')  // Hardcoded 'from' address and name
+            ->replyTo($request->email, $request->first_name . ' ' . $request->last_name)
+            ->to(setting('site_email'));
+    });
 
         return back()->with('success', clean(trans('cynoebook::contact.your_message_has_been_sent')));
     }
