@@ -203,7 +203,9 @@ abstract class BaseAuthController extends Controller
         $code = $this->auth->createReminderCode($user);
 
         Mail::to($user)
-            ->send(new ResetPasswordEmail($user, $this->resetCompleteRoute($user, $code)));
+        ->send((new ResetPasswordEmail($user, $this->resetCompleteRoute($user, $code)))
+        ->from('info@soccerfonts.com', 'Soccer Fonts App'));  // Hardcoded 'From' address
+    
 
         return back()->withSuccess(clean(trans('user::messages.users.check_email_to_reset_password')));
     }

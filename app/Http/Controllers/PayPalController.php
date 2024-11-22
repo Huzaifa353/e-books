@@ -12,6 +12,7 @@ use PayPalCheckoutSdk\Orders\OrdersCaptureRequest;
 use Modules\Ebook\Entities\Ebook;
 use PayPalHttp\HttpResponse;
 use Modules\User\Contracts\Authentication;
+use PayPalCheckoutSdk\Core\LiveEnvironment;
 
 class PayPalController extends Controller
 {
@@ -20,9 +21,15 @@ class PayPalController extends Controller
     public function __construct()
     {
         $clientId = env('PAYPAL_CLIENT_ID');
-       
         $clientSecret = env('PAYPAL_CLIENT_SECRET');
-        $environment = new SandboxEnvironment($clientId, $clientSecret);
+        
+        // Check environment (optional, for flexibility)
+        if (env('PAYPAL_MODE') === 'live') {
+            $environment = new LiveEnvironment($clientId, $clientSecret);
+        } else {
+            $environment = new SandboxEnvironment($clientId, $clientSecret);
+        }
+    
         $this->client = new PayPalHttpClient($environment);
     }
 
